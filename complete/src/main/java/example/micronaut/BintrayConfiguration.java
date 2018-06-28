@@ -2,9 +2,11 @@ package example.micronaut;
 
 import io.micronaut.context.annotation.ConfigurationProperties;
 import io.micronaut.context.annotation.Requires;
+import lombok.Data;
 
 @ConfigurationProperties(BintrayConfiguration.PREFIX)
 @Requires(property = BintrayConfiguration.PREFIX)
+@Data
 public class BintrayConfiguration {
 
     public static final String PREFIX = "bintray";
@@ -20,43 +22,4 @@ public class BintrayConfiguration {
 
     private String token;
 
-    public String getApiversion() {
-        return apiversion;
-    }
-
-    public void setApiversion(String apiversion) {
-        this.apiversion = apiversion;
-    }
-
-    public String getOrganization() {
-        return organization;
-    }
-
-    public void setOrganization(String organization) {
-        this.organization = organization;
-    }
-
-    public String getRepository() {
-        return repository;
-    }
-
-    public void setRepository(String repository) {
-        this.repository = repository;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 }

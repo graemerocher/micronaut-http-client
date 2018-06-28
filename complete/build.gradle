@@ -36,6 +36,8 @@ dependencyManagement {
 }
 
 dependencies {
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+    annotationProcessor "org.projectlombok:lombok:1.16.20"
     annotationProcessor "io.micronaut:inject-java"
     compile "io.micronaut:http-client"
     compile "io.micronaut:http-server-netty"
